@@ -7,9 +7,12 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
+import com.google.android.material.navigation.NavigationView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import static android.widget.Toast.LENGTH_LONG;
 
@@ -34,6 +37,28 @@ public class MainActivity extends AppCompatActivity {
                     commit();
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+
+            NavigationView navigationView = findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(MenuItem item) {
+                    switch (item.getItemId()){
+                        case R.id.action_setting:
+                            Toast toast1 = Toast.makeText(getApplicationContext(),
+                                    "Запуск настроек", Toast.LENGTH_SHORT);
+                            toast1.show();
+                            break;
+
+                        case R.id.action_about_application:
+                            Toast toast2 = Toast.makeText(getApplicationContext(),
+                                    "Информация о приложении", Toast.LENGTH_SHORT);
+                            toast2.show();
+                            break;
+
+                    }
+                    return false;
+                }
+            });
 
         }
 
