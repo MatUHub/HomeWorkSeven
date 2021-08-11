@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">HomeWorkSix</string>
+    <string name="app_name">HomeWorkSeven</string>
     <string name="setting_menu">настройки</string>
     <string name="about_application_manu">о приложении</string>
+    <string name="name_account">Петр</string>
+    <string name="profession">стоматолог</string>
 </resources>
