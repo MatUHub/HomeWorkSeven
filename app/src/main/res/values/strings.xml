@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HomeWorkSix</string>
+    <string name="setting_menu">настройки</string>
+    <string name="about_application_manu">о приложении</string>
 </resources>
